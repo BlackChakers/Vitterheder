@@ -3,9 +3,12 @@ language: dad
 
 concept:(Vittigheder) ["Sige noget sjovt" "Noget Vittigheder" joke Vittighed]
 
-u:(~Vittigheder) Vil du hør noget sjovt \pau=2000\ ^gotoRandom(joke)
+u:(~Vittigheder) Vil du hør noget sjovt \pau=1000\
+    u1: (Ja) Ja ^^gotoRandom(joke)
+    u1: (Nej)Nej ^gotoReactivate(startgåde)
+    
+proposal: %startgåde Vil du høre en gåde ? \pau=200\ ^gotoReactivate(gåder) 
 
-u:(gåde) Vil du høre en gåde ? \pau=200\ ^gotoReactivate(gåder) 
 proposal: %joke Alle børnerne sæd i blanderen udentagen Karl Smart han tryggede på start.
 
 proposal: %joke Alle børnerne gik i krig undtagen Gert \pau=1000\ Han vendte gevært forkert.
@@ -43,6 +46,8 @@ Ekspedienten: \pau=250\ Nej vi sælger kun hele hunden.
 proposal:%gåder Hvilke træer kaster ingen skygge?
     u1:(stammen træer) Tæt på
     u1:(stamtræer) Det er rigtigt.
-    u1:(e:Dialog/NotUnderstood)undskyld jeg kan ikke forstå hvad du siger ^stayInScope
-    u1:(e:Dialog/NotUnderstood2)kan du snakke dansk ? ^stayInScope
+    u1:(e:Dialog/NotUnderstood) Nej det er et forkerte svar
+    u1:(e:Dialog/NotUnderstood2)Det er stadig forkert
+    u1:(e:Dialog/NotSpeaking5) Du har ikke svaret på mit spørgsmål \pau=1500\ ^gotoRandom(joke)
     u1:(e:Dialog/NotUnderstood3) Du har ikke gættede rigtigt, \pau=200\ svaret var stamtræer \paus=1000\ ^gotoRandom(joke)
+        
