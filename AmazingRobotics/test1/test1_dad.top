@@ -1,20 +1,28 @@
 topic: ~test1()
 language: dad
-concept:(Vittigheder) ["Sige noget sjovt" "Noget Vitterheder"]
+
+concept:(Vittigheder) ["Sige noget sjovt" "Noget Vittigheder" joke Vittighed]
+
 u:(~Vittigheder) Vil du hør noget sjovt \pau=2000\ ^gotoRandom(joke)
+
+u:(gåde) Vil du høre en gåde ? \pau=200\ ^gotoReactivate(gåder) 
 proposal: %joke Alle børnerne sæd i blanderen udentagen Karl Smart han tryggede på start.
+
 proposal: %joke Alle børnerne gik i krig undtagen Gert \pau=1000\ Han vendte gevært forkert.
+
 proposal: %joke Er det spritkørsel hvis ens opvaskemaskine kører \pau=400\ når den er fuld ?
+
 proposal: %joke Tre drenge stod på et gadehjørne. Pludselig siger den ene: \pau=600\
  Min far har en bil,\pau=400\  der kan accelerere fra nul til hundrede på 6 sekunder.
 Den anden dreng siger: \pau=600\
  Min far har en bil,\paus=400\ der kan accelerere fra nul til hundrede på 3 sekunder.
 Så siger den tredje dreng: \pau=600\
 Min mor har en badevægt,\pau=400\ der kan accelerere fra nul til hundrede på 1 sekund.
+
 proposal: %joke Hvorfor tager århusianeren en pistol med ud i ørkenen? \pau=600\
 Fordi han vil skyde genvej.
-proposal: %joke To tosser er sluppet ud fra anstalten og har stjålet en motorcykel med sidevogn.
 
+proposal: %joke To tosser er sluppet ud fra anstalten og har stjålet en motorcykel med sidevogn.
 De kører afsted og pludselig siger den ene: 
 "Hu \pau=100\ hu \pau=100\ hu \pau=100\ hu" \pau=600\
 "Skal jeg køre hurtigere?" \pau=400\ Spørger den anden og sætter farten op.
@@ -22,4 +30,19 @@ Lidt efter siger den ene igen: \pau=600\
 "Hu \pau=100\ hu \pau=100\ hu \pau=100\ hu" \pau=450\
 "Hurtigere?" \pau=400\ Spørger den anden og sætter farten yderligere op. \pau=200\
 Kort tid efter og helt forpustet stønner den ene:\pau=600\
-"HU \pau=100\ HU \pau=100\ HUBERT! DER ER INGEN BUND I SIDEVOGNEN!!!" 
+"HU \pau=100\ HU \pau=150\ HUBERT! DER ER INGEN BUND I SIDEVOGNEN!!!" 
+
+proposal: Hvornår er en ur farligt? \pau=200\ Når den slår.
+
+proposal: Tim: \pau=250\ Hvad koster en hund? \pau=200\ 
+Ekspedienten: \pau=200\ 500 kroner \pau=200\
+Tim \pau=250\ Kan vi ikke sige det halve? \pau=200\
+Ekspedienten: \pau=250\ Nej vi sælger kun hele hunden.
+##############################################################################################################################
+# gåder
+proposal:%gåder Hvilke træer kaster ingen skygge?
+    u1:(stammen træer) Tæt på
+    u1:(stamtræer) Det er rigtigt.
+    u1:(e:Dialog/NotUnderstood)undskyld jeg kan ikke forstå hvad du siger ^stayInScope
+    u1:(e:Dialog/NotUnderstood2)kan du snakke dansk ? ^stayInScope
+    u1:(e:Dialog/NotUnderstood3) Du har ikke gættede rigtigt, \pau=200\ svaret var stamtræer \paus=1000\ ^gotoRandom(joke)
