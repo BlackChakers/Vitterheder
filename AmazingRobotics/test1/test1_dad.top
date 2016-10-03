@@ -1,5 +1,5 @@
 topic: ~test1()
 language: dad
 concept:(Vittigheder) ["Sige noget sjovt" "Noget Vitterheder"]
-u:(~Vittigheder) Vil du hør noget sjovt ^gotoRandom(joke)
+u:(~Vittigheder) Vil du hør noget sjovt \pau=2000\ ^gotoRandom(joke)
 proposal: %joke Alle børnerne sæd i blanderen udentagen Karl Smart han tryggede på start.
