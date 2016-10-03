@@ -5,3 +5,21 @@ u:(~Vittigheder) Vil du hør noget sjovt \pau=2000\ ^gotoRandom(joke)
 proposal: %joke Alle børnerne sæd i blanderen udentagen Karl Smart han tryggede på start.
 proposal: %joke Alle børnerne gik i krig undtagen Gert \pau=1000\ Han vendte gevært forkert.
 proposal: %joke Er det spritkørsel hvis ens opvaskemaskine kører \pau=400\ når den er fuld ?
+proposal: %joke Tre drenge stod på et gadehjørne. Pludselig siger den ene: \pau=600\
+ Min far har en bil,\pau=400\  der kan accelerere fra nul til hundrede på 6 sekunder.
+Den anden dreng siger: \pau=600\
+ Min far har en bil,\paus=400\ der kan accelerere fra nul til hundrede på 3 sekunder.
+Så siger den tredje dreng: \pau=600\
+Min mor har en badevægt,\pau=400\ der kan accelerere fra nul til hundrede på 1 sekund.
+proposal: %joke Hvorfor tager århusianeren en pistol med ud i ørkenen? \pau=600\
+Fordi han vil skyde genvej.
+proposal: %joke To tosser er sluppet ud fra anstalten og har stjålet en motorcykel med sidevogn.
+
+De kører afsted og pludselig siger den ene: 
+"Hu \pau=100\ hu \pau=100\ hu \pau=100\ hu" \pau=600\
+"Skal jeg køre hurtigere?" \pau=400\ Spørger den anden og sætter farten op.
+Lidt efter siger den ene igen: \pau=600\
+"Hu \pau=100\ hu \pau=100\ hu \pau=100\ hu" \pau=450\
+"Hurtigere?" \pau=400\ Spørger den anden og sætter farten yderligere op. \pau=200\
+Kort tid efter og helt forpustet stønner den ene:\pau=600\
+"HU \pau=100\ HU \pau=100\ HUBERT! DER ER INGEN BUND I SIDEVOGNEN!!!" 
