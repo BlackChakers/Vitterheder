@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<package uuid="amazingrobotics-bd05c4">
+ <names>
+  <name lang="en_US">AmazingRobotics</name>
+ </names>
+ <supportedLanguages>
+  <language>en_US</language>
+  <language>da_DK</language>
+ </supportedLanguages>
+ <descriptionLanguages>
+  <language>en_US</language>
+  <language>da_DK</language>
+ </descriptionLanguages>
+ <contents>
+  <behaviorContent path="behavior_1">
+   <nature>interactive</nature>
+   <permissions/>
+  </behaviorContent>
+ </contents>
+</package>
