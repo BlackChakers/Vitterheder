@@ -3,11 +3,11 @@ language: dad
 
 concept:(Vittigheder) ["Sige noget sjovt" "Noget Vittigheder" joke Vittighed]
 
-u:(~Vittigheder) Vil du hør noget sjovt \pau=1000\
-    u1: (Ja) Ja ^^gotoRandom(joke)
-    u1: (Nej)Nej ^gotoReactivate(startgåde)
-    
-proposal: %startgåde Vil du høre en gåde ? \pau=200\ ^gotoReactivate(gåder) 
+u:(~Vittigheder)%start Vil du hør noget sjovt ^start(animations/Stand/Gestures/You_1) \pau=1000\
+    u1: (Ja) ^^gotoRandom(joke)^stop(animations/Stand/Gestures/You_1)
+    u1: (Nej) Vil du hør en gåde ? 
+        u2:(Ja) ^gotoRandom(gåder) \pau=500\
+        u2:(Nej) ^goto(~Vittigheder) 
 
 proposal: %joke Alle børnerne sæd i blanderen udentagen Karl Smart han tryggede på start.
 
@@ -48,6 +48,11 @@ proposal:%gåder Hvilke træer kaster ingen skygge?
     u1:(stamtræer) Det er rigtigt.
     u1:(e:Dialog/NotUnderstood) Nej det er et forkerte svar
     u1:(e:Dialog/NotUnderstood2)Det er stadig forkert
-    u1:(e:Dialog/NotSpeaking5) Du har ikke svaret på mit spørgsmål \pau=1500\ ^gotoRandom(joke)
+    u1:(e:Dialog/NotSpeaking5) Du har ikke svaret på mit spørgsmål \pau=1500\ ^goto(Vittigheder)
     u1:(e:Dialog/NotUnderstood3) Du har ikke gættede rigtigt, \pau=200\ svaret var stamtræer \paus=1000\ ^gotoRandom(joke)
+
+proposal:%gåder Ved du hvordan lommetyve kommer på afvænning?
+    u1:(Det ved jeg ik) De bliver sendt på 4 ugers ophold i en nudist lejr!! \pau=1500\ ^goto(start)
+    u1:(Nej) De bliver sendt på 4 ugers ophold i en nudist lejr!! \pau=1500\ ^goto(start)
+    u1:(en nudist lejr) Ja det er rigtigt \pau=1500\ ^goto(start)
         
